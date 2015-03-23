@@ -1,15 +1,31 @@
 <%= form_for :get, :html => {:method => :get}, :url => { :controller => :images, :action => :index }  do |f| %>
-	<%@arreglo.each do |foto|%>
-		<%=foto.chomp('.jpg').humanize%>
-		<br>
-	<%end%>
-
-	<%unless @ganador.nil?%>
-		<%=image_tag "#{@ganador}"%>
-		<%="#{@ganador}".chomp('.jpg').humanize %>
-	<%end%>
-
-	<%= f.submit 'Random',:class => 'btn'%>
-	<%= f.submit 'Restart',:class => 'btn'%>
-
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            	<%= f.submit 'Random',:class => 'btn'%>
+				<%= f.submit 'Restart',:class => 'btn'%>
+				<br><br>
+            	<%unless @ganador.nil?%>
+					<%=image_tag "#{@ganador}",  size: "280x180", :class=>"img-responsive"%>
+                	<div class="intro-text">
+                    	<span class="name"><%="#{@ganador}".chomp('.jpg').humanize %></span>
+                    </div>
+                <%else%>
+                	<H1>FOTO RANDOM</H1>    
+                <%end%>
+                <hr class="star-light">
+                <span class="skills">
+	                <%@arreglo.each do |foto|%>
+						<%=foto.chomp('.jpg').humanize%> -
+					<%end%>
+					<br>
+					Jugadores: <%=@arreglo.count%>
+				</span>
+				
+                
+            </div>
+        </div>
+    </div>
+</header>
 <%end%>
