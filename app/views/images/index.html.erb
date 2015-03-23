@@ -1,2 +1,13 @@
-<h1>Images#index</h1>
-<p>Find me in app/views/images/index.html.erb</p>
+<%= form_for :get, :html => {:method => :get}, :url => { :controller => :images, :action => :index }  do |f| %>
+	<%@arreglo.each do |foto|%>
+		<%=foto%>
+		<br>
+	<%end%>
+
+	<%unless @ganador.nil?%>
+		<%=image_tag "#{@ganador}"%>
+		<%="#{@ganador}".chomp('.jpg').humanize %>
+	<%end%>
+	
+	<%= f.submit 'Random',:class => 'btn'%>
+<%end%>
