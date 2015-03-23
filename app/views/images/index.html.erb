@@ -1,6 +1,6 @@
 <%= form_for :get, :html => {:method => :get}, :url => { :controller => :images, :action => :index }  do |f| %>
 	<%@arreglo.each do |foto|%>
-		<%=foto%>
+		<%=foto.chomp('.jpg').humanize%>
 		<br>
 	<%end%>
 
@@ -8,6 +8,8 @@
 		<%=image_tag "#{@ganador}"%>
 		<%="#{@ganador}".chomp('.jpg').humanize %>
 	<%end%>
-	
+
 	<%= f.submit 'Random',:class => 'btn'%>
+	<%= f.submit 'Restart',:class => 'btn'%>
+
 <%end%>
