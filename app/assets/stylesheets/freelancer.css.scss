@@ -63,7 +63,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #F5FC32;;
 }
 
 hr.star-primary {
@@ -82,7 +82,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #5db1b1;
-    background: url(https://lh3.googleusercontent.com/-PGnXbMTG2rk/VPyPAVpKoLI/AAAAAAAACPY/VcGnOFen9xI/w816-h544-no/transito2.jpg) no-repeat;
+    background-color: #fff;
     background-size:100%;
 }
 
@@ -113,8 +113,8 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     header .intro-text .name {
