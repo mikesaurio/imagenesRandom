@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+        height: 100%;
 }
 
 p {
@@ -83,11 +84,13 @@ header {
     text-align: center;
     color: #fff;
     background: #18bc9c;
+        height: 100%;
 }
 
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+        height: 100%;
 }
 
 header img {
@@ -112,6 +115,7 @@ header .intro-text .skills {
     header .container {
         padding-top: 50px;
         padding-bottom: 50px;
+            height: 100%;
     }
 
     header .intro-text .name {
